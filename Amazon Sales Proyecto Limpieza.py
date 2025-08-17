@@ -8,7 +8,7 @@ Created on Sat Aug 16 23:39:08 2025
 import pandas as pd
 
 # =============================================================================
-# 1) Carga de datos
+# Carga de datos
 # =============================================================================
 # Cargamos el Excel en un DataFrame para poder explorarlo, limpiarlo y analizarlo.
 sales_data = pd.read_excel('sales_data.xlsx')
@@ -120,6 +120,7 @@ status_averages.to_excel('average_sales_by_category_and_status.xlsx', index=Fals
 
 # Ventas por estado de envío y cumplimiento
 total_sales_shipandfulfil.to_excel('total_sales_by_ship_and_fulfil.xlsx', index=False)
+
 
 
 
