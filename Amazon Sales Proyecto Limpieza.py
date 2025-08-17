@@ -15,7 +15,7 @@ sales_data = pd.read_excel('sales_data.xlsx')
 
 
 # =============================================================================
-#Exploración
+# Exploración
 # =============================================================================
 
 # nº de filas/columnas, memoria, tipos y nulos por columna.
@@ -43,7 +43,6 @@ print(sales_data.dtypes)
 print(sales_data.isnull().sum())
 
 # Observamos que "account" y "currency" tienen muchos nulos, pero pueden ser informativos;
-# en cambio, "Amount" es crítico para análisis financieros (sumas/promedios).
 # Decidimos ELIMINAR solo filas con Amount nulo porque:
 # - Sin Amount no podemos calcular ventas totales/medias.
 # - Evitamos propagar NaN en agregaciones y mantener métricas consistentes.
@@ -120,6 +119,7 @@ status_averages.to_excel('average_sales_by_category_and_status.xlsx', index=Fals
 
 # Ventas por estado de envío y cumplimiento
 total_sales_shipandfulfil.to_excel('total_sales_by_ship_and_fulfil.xlsx', index=False)
+
 
 
 
